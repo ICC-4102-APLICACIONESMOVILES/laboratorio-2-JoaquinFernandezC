@@ -12,7 +12,6 @@ import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private DrawerLayout mDrawerLayout;
 
     @Override
@@ -36,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                         // set item as selected to persist highlight
                         menuItem.setChecked(true);
                         // close drawer when item is tapped
+                        Form form = new Form();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.form_fragment, form);
                         mDrawerLayout.closeDrawers();
 
                         // Add code here to update the UI based on the item selected
